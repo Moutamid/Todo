@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/_15_mins_menu_id"
+        android:title="15 minutes" />
+    <item
+        android:id="@+id/_30_mins_menu_id"
+        android:title="30 minutes" />
+    <item
+        android:id="@+id/_45_mins_menu_id"
+        android:title="45 minutes" />
+    <item
+        android:id="@+id/_60_mins_menu_id"
+        android:title="60 minutes" />
+    <item
+        android:id="@+id/_75_mins_menu_id"
+        android:title="75 minutes" />
+    <item
+        android:id="@+id/_90_mins_menu_id"
+        android:title="90 minutes" />
+
+</menu>

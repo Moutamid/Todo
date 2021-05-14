@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/addTaskLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/skyBlue"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Task"
+            android:textColor="@color/white"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="20dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/titleTextviewMainactivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#92E9EBF8"
+                android:hint="Text title"
+                android:inputType="textPersonName"
+                android:padding="15dp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="Time"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#A8E9EBF8"
+                    android:padding="15dp">
+
+                    <TextView
+                        android:id="@+id/timeTExtviewMainactivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Per session"
+                        android:textColor="@color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:rotation="270"
+                        android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:text="Days"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:background="#A8E9EBF8"
+                    android:padding="15dp">
+
+                    <EditText
+                        android:id="@+id/daysTExtviewMainactivity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:background="#00E9EBF8"
+                        android:hint="Number of days"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginRight="10dp"
+                        android:rotation="270"
+                        android:src="@drawable/ic_baseline_arrow_back_ios_24" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            app:cardCornerRadius="100dp"
+            app:cardElevation="10dp">
+
+            <ImageView
+                android:id="@+id/addTaskBtn"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:background="@color/white"
+                android:scaleType="center"
+                android:src="@drawable/ic_baseline_check_24" />
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/tasksListLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/textView"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/addBtnLayout"
+            android:layout_below="@id/textView"
+            android:layout_margin="10dp" />
+
+        <RelativeLayout
+            android:id="@+id/addBtnLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="20dp"
+            android:background="@drawable/bg_add_task_btn">
+
+            <ImageView
+                android:id="@+id/addBtn"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_baseline_add_24" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/newTaskLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <RelativeLayout
+            android:id="@+id/backgroundLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/bottom_sheet_layout"
+            android:layout_marginBottom="-20dp"
+            android:background="#4D040404" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bottom_sheet_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="-10dp"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="25dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#34A853"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <EditText
+                    android:id="@+id/title_name_et_new_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="#00ffffff"
+                    android:hint="Enter a name"
+                    android:textColor="@color/white"
+                    android:textColorHint="#99FFFFFF"
+                    android:textSize="25sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_calender_date_range_24" />
+
+                    <EditText
+                        android:id="@+id/number_of_days_et_new_task"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:background="#00ffffff"
+                        android:hint="Enter number of days"
+                        android:inputType="number"
+                        android:textColor="@color/white"
+                        android:textColorHint="#99FFFFFF"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/daily_timer_layout_new_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp">
+
+                    <ImageView
+                        android:id="@+id/timericon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_baseline_access_time_24" />
+
+                    <TextView
+                        android:id="@+id/daily_timer_text_view_new_task"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_toStartOf="@+id/downmenuicon"
+                        android:layout_toLeftOf="@+id/downmenuicon"
+                        android:layout_toEndOf="@+id/timericon"
+                        android:layout_toRightOf="@+id/timericon"
+                        android:text="Select daily timer (Optional)"
+                        android:textColor="#99FFFFFF"
+                        android:textSize="20sp" />
+
+                    <ImageView
+                        android:id="@+id/downmenuicon"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/save_btn_text_view_new_task"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:gravity="end"
+                    android:text="Save"
+                    android:textColor="@color/white"
+                    android:textSize="25sp" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+
+</RelativeLayout>
