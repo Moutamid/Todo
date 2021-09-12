@@ -36,6 +36,8 @@ import com.fxn.stash.Stash;
 import java.util.ArrayList;
 import java.util.Collections;
 
+import dev.moutamid.todo.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     private final Context context = MainActivity.this;
@@ -66,11 +68,17 @@ public class MainActivity extends AppCompatActivity {
 //       ArrayList<User> userArrayListNew =
 //                       Stash.getArrayList("TAG_DATA_ARRAYLIST", User.class);
 
+    ActivityMainBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
+        View view = binding.getRoot();
+//        setContentView(R.layout.activity_main);
+        setContentView(view);
+
 
 //        BottomSheetLayout layout = (BottomSheetLayout) findViewById(R.id.bottom_sheet_layout);
 //        new Handler().postDelayed(new Runnable() {
